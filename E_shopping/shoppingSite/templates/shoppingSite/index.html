@@ -1,0 +1,36 @@
+{% extends "shoppingSite/layout.html" %}
+
+{% block body %}
+    <nav class="navbar navbar-expand-lg navbar-container">
+        <div class="container-fluid ">
+          <a class="navbar-brand" href="#">Shopping</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav" id="navbarEle">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'shopping:index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'shopping:category' %}">Categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'shopping:cart' %}">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'shopping:user' %}">User Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'shopping:login' %}">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container-background">
+         <h1>Shopping Site</h1>
+         <button>Visit Site</button>
+    </div>
+{% endblock %}
